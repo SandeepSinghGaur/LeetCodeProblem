@@ -28,6 +28,6 @@ public:
 
  /**
      * Optimize Approach: Just apply what's said in the statement.
-     * TC: O(nlogn)
+     * TC: O(logn)
      * SC: O(n)
      */
