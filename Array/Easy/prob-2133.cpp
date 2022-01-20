@@ -40,3 +40,9 @@ public:
           
     }
 };
+
+ /**
+     * Optimize Approach: Just apply what's said in the statement.
+     * TC: O(n^2)
+     * SC: O(n)
+     */
