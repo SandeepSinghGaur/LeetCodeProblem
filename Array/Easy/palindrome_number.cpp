@@ -14,7 +14,7 @@ Explanation: 121 reads as 121 from left to right and from right to left. */
 
 /* https://leetcode.com/problems/palindrome-number/ */
 
-// Time Complaxity: O(n^2)
+// Time Complaxity: O(n)
 
 
 
@@ -45,7 +45,6 @@ int main()
 {
     int x=121;
 	cout<<isPalindrome(x);
-    
 	return 0;
 }
 
