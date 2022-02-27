@@ -17,32 +17,27 @@ public:
     vector<int> twoSum(vector<int>& nums, int target) {
         vector<int>dummy;
         int n=nums.size();
+        unordered_map<int,int>us;
         for(int i=0;i<n;i++){
-             if(target==0 && nums[i]==0){
-                     dummy.push_back(i);
-                }
-               else{
-                    int sum=0;
-                    for(int j=i+1;j<n;j++){
-                      sum=nums[i]+nums[j];
-                      if(sum==target){
-                      dummy.push_back(i);
-                      dummy.push_back(j);
-                      }
-                  }
+                    int x=target-nums[i];
+            if(us.find(nums[i])!=us.end()){
+                 dummy.push_back(us[nums[i]]);
+                dummy.push_back(i);
+               
+            }else{
+                us.insert({x,i});
             }
-           
-        }
-        return dummy;  
+            }
+        return dummy;
+        
     }
 };
 
 // Time Complaxity and Space Complaxity
 
  /**
-     * MY Approach: Just apply what's said in the statement.
-     * TC: O(n^2) 
-       Because I am two for loop for getting the pair of (i,j)
+     * MY Approach: using unordered_map able to reduce time complaxity .
+     * TC: O(n) 
      * SC: O(n)
        I am using the dummy vector to saved the index and finally I am returning this Index.
      */
