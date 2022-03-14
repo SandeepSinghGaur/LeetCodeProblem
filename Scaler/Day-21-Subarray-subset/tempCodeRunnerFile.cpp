@@ -1,0 +1,1 @@
+sort(temp.begin(),temp.end(),cmp); // we are passing temp.begin() means first row and temp.end() last row 
