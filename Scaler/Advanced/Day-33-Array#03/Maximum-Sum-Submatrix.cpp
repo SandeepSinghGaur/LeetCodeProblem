@@ -17,15 +17,18 @@ int kadane(int *res,int n){
 }
 
 int solve(vector<vector<int> > &A) {
-    int ans=0;
-    int col=A[0].size();
-    int sum[col]={0};
-    for(int i=0;i<A.size();i++){
-        for(int j=0;j<col;j++){
-            sum[i]+=A[i][j];
+    int ans=INT_MIN;
+    int n=A[0].size();
+     for(int st=0;st<A.size();st++){
+        int sum[n]={0};
+       for(int i=st;i<A.size();i++){
+        for(int j=0;j<n;j++){
+            sum[j]+=A[i][j];
         }
-        ans=max(ans,kadane(sum,col));
+        ans=max(ans,kadane(sum,n));
     }
+    }
+   
     return ans;
 }
 
