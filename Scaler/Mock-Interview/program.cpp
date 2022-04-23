@@ -62,7 +62,7 @@ vector<string>find_string(vector<string>&A,string s){
                 int prev_val=um[it.first];
                 prev_val+=temp[it.first];
                 um[it.first]=prev_val;
-            }
+               }
             }
            
         }else{
@@ -71,7 +71,7 @@ vector<string>find_string(vector<string>&A,string s){
         
     }
     if(ans.size()==0){
-        ans.push_back("null");
+        ans.push_back("NULL/None");
     }
     return ans;
 }
@@ -81,6 +81,6 @@ int main(){
     vector<string>result;
     result=find_string(str,s);
     for(auto it:result){
-        cout<<it<<" "<<endl;
+        cout<<it<<" ";
     }
 }
