@@ -27,9 +27,7 @@ using namespace std;
     int ans;
     while(low<=high){
         int mid=(low+high)/2;
-        if(mid*mid==A){
-            return mid;
-        }else if(mid*mid>A){
+        if(mid*mid>A){
             high=mid-1;
         }else{
             ans=mid;
