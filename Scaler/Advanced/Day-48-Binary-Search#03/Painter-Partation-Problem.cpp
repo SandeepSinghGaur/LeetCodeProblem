@@ -23,3 +23,47 @@ C = [1, 10]
 Output
 50
 */
+#include<bits/stdc++.h>
+using namespace std;
+bool check(vector<int>v,int k,int mid){
+    int count=0,sum=0;
+    for(int i=0;i<v.size();i++){
+        sum+=v[i];
+        if(sum>mid){
+            sum=v[i];
+            count++;
+        }
+        if(count==k){
+            return false;
+        }
+    }
+    return true;
+}
+int paint(int A, int B, vector<int> &C) {
+    //first check can we apply binary search technique here
+    //1- what we need to find(Target)
+    //2- when we need to find(Search space)
+    //3-are we able to divide our search space in one half or not
+    int max_val=INT_MIN,total_sum=0;
+    long long ans;
+    for(int i=0;i<C.size();i++){
+        max_val=max(max_val,C[i]);
+        total_sum+=C[i];
+    }
+    int low=max_val,high=total_sum;
+    while(low<=high){
+        int mid=(low+high)/2;
+        if(check(C,A,mid)){
+          ans=(1l*B*mid)%10000003;
+          high=mid-1;
+        }else{
+            low=mid+1;
+        }
+    }
+    return ans%10000003;
+}
+int main(){
+    vector<int>v={1, 10};
+    int A=2,B=5;
+    cout<<paint(A,B,v);
+}
