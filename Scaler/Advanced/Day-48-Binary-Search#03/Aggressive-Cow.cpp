@@ -18,6 +18,7 @@ B = 3
 Output
 2
 */
+
 #include<bits/stdc++.h>
 using namespace std;
 bool isPlaceCow(vector<int>&stall,int mid,int cow){
