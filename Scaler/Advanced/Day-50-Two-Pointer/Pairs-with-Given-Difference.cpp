@@ -27,16 +27,32 @@ Output
 using namespace std;
 
 int solve(vector<int> &A, int B) {
-    sort(A.begin(),A.end());
-    int p1=0,p2=1,ans=0;
-    while(p2<A.size()){
-       if(abs(A[p2]-A[p1])==B){
+ sort(A.begin(),A.end());
+    vector<int>temp;
+    temp.push_back(A[0]);
+    for(int i=1;i<A.size();i++){
+        if(A[i]!=temp.back()){
+            temp.push_back(A[i]);
+        }
+    }
+    int ans=0;
+    if(temp.size()==1){
+        if(B==0){
+            return 1;
+        }
+    }
+    int p1=0,p2=1;
+    while(p2<temp.size()){
+       if(abs(temp[p2]-temp[p1])==B){
           ans++;
           p2++;
-       }else if(abs(A[p2]-A[p1])>B){
-           p1--;
-       }else{
+       }else if(abs(temp[p2]-temp[p1])>B){
            p1++;
+           if(p1==p2){
+               p2++;
+           }
+       }else{
+           p2++;
        }
     }
     return ans;

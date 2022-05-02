@@ -1,6 +1,30 @@
 
 
-/* This is a comment */
+/*
+Problem Description
+
+Given an array A of N integers, are there elements a, b, c in S such that a + b + c = 0
+
+Find all unique triplets in the array which gives the sum of zero.
+
+Note:
+
+Elements in a triplet (a,b,c) must be in non-descending order. (ie, a ≤ b ≤ c) The solution set must not contain duplicate triplets.
+
+Problem Constraints
+
+0 <= N <= 7000
+
+-10^8 <= A[i] <= 10^8
+
+Input
+A = [-1,0,1,2,-1,4]
+Output
+[ [-1,0,1],
+  [-1,-1,2] ]
+
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
