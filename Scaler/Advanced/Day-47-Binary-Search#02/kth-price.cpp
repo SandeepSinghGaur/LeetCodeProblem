@@ -22,7 +22,7 @@ Constraints :
 using namespace std;
 int kthsmallest(const vector<int> &A, int B) {
        int low=A[0];
-    int high=A[0];
+       int high=A[0];
     for(int i=1;i<A.size();i++){
         low=min(low,A[i]);
         high=max(high,A[i]);
