@@ -19,16 +19,20 @@ output
 using namespace std;
 
 int solve(vector<int> &A) {
-   unordered_map<int,int>um;
+  unordered_map<int,int>um;
    //I am storing key as array element and value as the index of that element
    int min_distance=INT_MAX;
+   bool check=true;
    for(int i=0;i<A.size();i++){
        if(um.find(A[i])!=um.end()){
+           check=false;
            min_distance=min(min_distance,abs(i-um[A[i]]));
        }else{
            um.insert({A[i],i});
        }
    }
+   if(check)
+   return -1;
    return min_distance;
 
 }
