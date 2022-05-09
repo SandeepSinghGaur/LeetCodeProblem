@@ -19,56 +19,35 @@ Output
 using namespace std;
 
 vector<int> largest_Continuous_Sequences(vector<int>&A){
-        vector<long long>pf(A.size());
-      vector<int>result;
-      int n=A.size();
-     pf[0]=A[0];
-    for(int i=1;i<A.size();i++){
-        pf[i]=A[i]+pf[i-1];
-    }
-    int index=0;
-    for(int i=n-1;i>=0;i--){
-        if(pf[i]==0){
-         index=i;
-         break;
-        }
-         
-    }
-    int index2=INT_MIN;
-    int start,end;
-    bool check=true;
-    unordered_map<long long,int>um;
-   for(int i=0;i<A.size();i++){
-       if(um.find(pf[i])!=um.end()){
-           if(abs(i-um[pf[i]])>index2){
-               check=false;
-               index2=abs(i-um[pf[i]]);
-               start=um[pf[i]];
-               end=i;
+       map<long,int>mp;
+       long sum=0;
+       int start=-1,length=0;
+       for(int i=0;i<A.size();i++){
+           sum+=A[i];
+           if(sum==0){
+               start=0;
+               length=i+1;
            }
-       }else{
-           um.insert({pf[i],i});
+           if(mp.count(sum) && length<i-mp[sum]){
+               start=mp[sum]+1;
+               length=i-mp[sum];
+           }
+           if(mp.count(sum)==false){
+               mp[sum]=i;
+           }
        }
-   }
-   if(index==0 && check){
-       return result;
-   }
-   if(index+1>=end-start){
-       for(int i=0;i<=index;i++){
-           result.push_back(A[i]);
+       vector<int>ans;
+       for(int i=start;i<start+length;i++){
+             ans.push_back((A[i]));
        }
-   }else{
-       for(int i=start+1;i<=end;i++){
-           result.push_back(A[i]);
-       }
-   }
-  
-    return result;
+       return ans;
+
 }
 int main(){
-    vector<int>v={1,2,-2,4,-4};
+    vector<int>v={10, 13, -1, 8, 29, 1, 24, 8, 21, 20, 21, -23, -21, 0 };
     vector<int>result;
     result=largest_Continuous_Sequences(v);
+     cout<<"final result"<<" ";
     for(auto it:result){
         cout<<it<<" ";
     }
