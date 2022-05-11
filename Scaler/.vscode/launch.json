@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ABC",
+      "request": "launch",
+      "mainClass": "JavaCollections.ABC",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch Hello",
       "request": "launch",
       "mainClass": "Hello",
