@@ -18,26 +18,27 @@ using namespace std;
 
 
 string solve(string A) {
-    cout<<A.length()<<endl;
-      int n=(A.length())/2;
-   int p1=0;
-   int p2=A.length()-1;
-   while(p1<p2){
-       if(A[p1]!=A[p2] && A[n-1]==A[n]){
-           return "NO";
-       }
-       p1++;
-       p2--;
-   }
- 
-   if(A.length()%2==0){
-       if(A[n-1]==A[n])
-        return "NO";
-   }
-   return "YES";
+    int n=A.length();
+  int count=0;
+  int p1=0;
+  int p2=n-1;
+  while(p1<p2){
+      if(A[p1]!=A[p2]){
+          count++;
+      }
+      p1++;p2--;
+  }
+  if(count==0 && p1==p2){
+      return "YES";
+  }
+  if(count>=2|| count==0){
+      return "NO";
+  }else{
+      return "YES";
+  }
 
 }
 int main(){
-    string A="aaaaaaaaaabaaaaaaaaa";
+    string A="abbba";
     cout<<solve(A);
 }
