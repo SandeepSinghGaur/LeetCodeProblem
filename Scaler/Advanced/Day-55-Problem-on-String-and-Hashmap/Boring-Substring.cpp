@@ -19,26 +19,62 @@ Output
  1
  0
 */
+/*
+Approach-:
+1-we can represent every number in o or 1;
+2-if we keep all even together and all odd together we will not get and Boring string just one condition need to check
+  when we concatnate even to odd or odd to even need to check difference must be greater than 1.
 
+Time Complaxity:
+1- we are taking two array which are storing odd character and even character
+TC:O(A.length())
+SC:O(A.length())  
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 
 int solve(string &A){
-      int no_of_substring=0;
-    for(int i=0;i<A.length()-1;i++){
-          if(abs(A[i]-'0'-A[i+1]-'0')==1){
-              no_of_substring++;
-          }
+   vector<char>evenChar;
+vector<char>oddChar;
+for(int i=0;i<A.length();i++){
+    if((A[i]-'0')%2==0){
+        evenChar.push_back(A[i]);
+    }else{
+        oddChar.push_back(A[i]);
     }
-    unordered_set<char>us;
-    for(int i=0;i<A.length();i++){
-        us.insert(A[i]);
-    }
-    if(no_of_substring>us.size())
-    return 0;
+}
+int num=1;
+for(auto it:oddChar){
+    cout<<num<<" "<<it<<" "<<endl;
+    num++;
+}
+num=1;
+cout<<"===================="<<endl;
+for(auto it:evenChar){
+   cout<<num<<" "<<it<<" "<<endl;
+   num++;
+}
+if(evenChar.size()==0 || oddChar.size()==0){
     return 1;
 }
+if(evenChar.size()>oddChar.size()){
+  for(int i=0;i<evenChar.size();i++){
+      if(abs((evenChar[i]-'0')-(oddChar[0]-'0'))>1){
+          return 1;
+      }
+  }
+  return 0;
+}else{
+      for(int i=0;i<oddChar.size();i++){
+      if(abs((oddChar[i]-'0')-(evenChar[0]-'0'))>1){
+          return 1;
+      }
+  }
+  return 0;
+}
+}
 int main(){
-    string str="abcd";
+    string str="hbbgcbcadjgii";
     cout<<solve(str);
 }

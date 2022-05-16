@@ -14,3 +14,8 @@ B = "abcbacabc"
 Output
 5
 */
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+    
+}
