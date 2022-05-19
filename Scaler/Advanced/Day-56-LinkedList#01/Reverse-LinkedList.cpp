@@ -28,7 +28,8 @@ Node *head=NULL;
 int size_of_ll=0;
 void Insert_Node_LL(){
     //insert 5 Node in LL
-    
+    int k;
+    cin>>k;
     if(head==NULL){
          int x;
         cin>>x;
@@ -36,15 +37,14 @@ void Insert_Node_LL(){
         head=newNode;
     }
     Node *temp=head;
-    int k=1;
-    while(k!=5){
+    while(k!=0){
         int x;
         cin>>x;
         Node *newNode=new Node(x);
         temp->next=newNode;
         temp=temp->next;
         size_of_ll++;
-        k++;
+        k--;
     }
 
 }
@@ -90,12 +90,35 @@ void print_reverse(Node *start){
          cout<<endl;
     }
 }
+int printMiddleElement(Node *A){
+   int size_of_ll=0;
+  Node *temp=A;
+  while(temp!=NULL){
+     size_of_ll++;
+     temp=temp->next;
+  }
+  cout<<"size of ll:"<<size_of_ll<<endl;
+    int midLength;
+    if(size_of_ll%2==0){
+       midLength=(size_of_ll/2);
+    }else{
+        midLength=floor(size_of_ll/2);
+    }
+    int k=0;
+    Node *temp2=A;
+    while(k!=midLength){
+      temp2=temp2->next;
+      k++;
+    }
+    return temp2->data;
+}
 
 
 int main(){
     Insert_Node_LL();
     cout<<"Linked List"<<endl;
     print();
+    cout<<"Middle Element:"<<printMiddleElement(head)<<endl;
     Node * res=reverse_LL(head);
     cout<<"reverse LL"<<endl;
     print_reverse(res);
