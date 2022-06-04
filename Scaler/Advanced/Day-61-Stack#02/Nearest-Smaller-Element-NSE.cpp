@@ -28,26 +28,26 @@ Output
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> nextGreaterLeft(vector<int> &A) {
- stack<int>st;
+vector<int> prevSmaller(vector<int> &A) {
     vector<int>ans;
+    stack<int>look_up_container;
     for(int i=0;i<A.size();i++){
-        while(!st.empty() && st.top()<=A[i]){
-            st.pop();
+        while(!look_up_container.empty() && look_up_container.top()>=A[i]){
+            look_up_container.pop();
         }
-        if(!st.empty()){
-            ans.push_back(st.top());
+        if(!look_up_container.empty()){
+            ans.push_back(look_up_container.top());
         }else{
             ans.push_back(-1);
         }
-        st.push(A[i]);
+        look_up_container.push(A[i]);
     }
     return ans;
 }
 int main(){
-    vector<int>A={10,3,9,5,7,2,11};
+    vector<int>A={4, 5, 2, 10, 8};
     vector<int>result;
-    result=nextGreaterLeft(A);
+    result=prevSmaller(A);
     for(auto it:result){
         cout<<it<<" ";
     }

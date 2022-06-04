@@ -1,6 +1,6 @@
 /*
 Given an array A, find the next greater element G[i] for every element A[i] in the array.
-The next greater element for an element A[i] is the first greater element on the left side of A[i] in the array, A.
+The next greater element for an element A[i] is the first greater element on the right side of A[i] in the array, A.
 
 More formally:
 
@@ -27,7 +27,7 @@ using namespace std;
 vector<int> nextGreaterLeft(vector<int> &A) {
  stack<int>st;
     vector<int>ans;
-    for(int i=0;i<A.size();i++){
+    for(int i=A.size()-1;i>=0;i--){
         while(!st.empty() && st.top()<=A[i]){
             st.pop();
         }
@@ -38,6 +38,7 @@ vector<int> nextGreaterLeft(vector<int> &A) {
         }
         st.push(A[i]);
     }
+    reverse(ans.begin(),ans.end());
     return ans;
 }
 int main(){
