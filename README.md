@@ -8,7 +8,7 @@ My solutions to questions on Scaler Academy topic wise
 | Topic | Question | Solution |
 | ----- | -------- | -------- |
 |Arrays|||
-|0|Max Non Negative SubArray|[Here]()|
+|0|Littel Ponny and Max Element|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Intermediate/Day-08-Array/little_ponny_and_max_element.cpp)|
 |1|Merge Overlapping Intervals|[Here]()|
 |2|Wave Array|[Here]()|
 |3|Maximum Absolute Difference|[Here]()|
