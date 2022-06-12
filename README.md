@@ -32,4 +32,5 @@ My solutions to questions on Scaler Academy topic wise
 |23|MAX - MIN|[Here]()|
 |24|Maximum Separation|[Here]()|
 |25|Minimum Swaps 2|[Here]()|
+| Maths |||
 
