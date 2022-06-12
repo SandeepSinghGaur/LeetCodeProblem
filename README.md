@@ -1,5 +1,9 @@
 
-# DSA Standard Question
+# Scaler DSA Problems
+
+My solutions to questions on Scaler Academy topic wise
+
+ # Question Solved #
 
 | Topic | Question | Solution |
 | ----- | -------- | -------- |
