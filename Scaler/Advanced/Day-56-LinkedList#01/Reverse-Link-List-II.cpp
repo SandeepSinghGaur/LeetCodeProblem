@@ -18,3 +18,19 @@ Input
  Output
   1 -> 4 -> 3 -> 2 -> 5
 */
+
+#include<bits/stdc++.h>
+using namespace std;
+struct Node{
+    int val;
+    Node *next;
+    Node(int d){
+        val=d;
+        next=NULL;
+    }
+};
+Node *head=NULL;
+int size_of_ll=0;
+int main(){
+
+}

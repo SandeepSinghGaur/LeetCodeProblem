@@ -13,18 +13,11 @@ Output
 */
 #include<bits/stdc++.h>
 using namespace std;
-int times=1;
-void merge_array(vector<int>&A,int low,int mid,int high){
-    cout<<"times"<<" "<<times<<endl;
-    times++;
-    cout<<"================="<<endl;
-       cout<<"low"<<" "<<low<<endl;
-       cout<<"mid"<<" "<<mid<<endl;
-       cout<<"high"<<" "<<high<<endl;
-        vector<int>temp(high-low+1,0);
-        int p1=low,p2=mid+1,p3=0;
-        while(p1<mid && p2<high){
-            if(A[p1]<A[p2]){
+ void merge_array(vector<int>&A,int low,int mid,int high){
+        vector<int>temp(high-low+1);
+        int p1=low,p2=mid+1, p3=0;
+        while(p1<=mid && p2<=high){
+            if(A[p1]<=A[p2]){
                 temp[p3]=A[p1];
                 p3++;
                 p1++;
@@ -34,20 +27,18 @@ void merge_array(vector<int>&A,int low,int mid,int high){
                 p2++;
             }
         }
-        while(p1<mid){
+        while(p1<=mid){
             temp[p3]=A[p1];
             p1++;
             p3++;
         }
-         while(p2<high){
+         while(p2<=high){
             temp[p3]=A[p2];
             p2++;
             p3++;
         }
-        int k=0;
         for(int i=low;i<=high;i++){
-            A[low]=temp[k];
-            k++;
+            A[i]=temp[i-low];
         }
     }
    void merge_sort(vector<int>&A,int low,int high){
