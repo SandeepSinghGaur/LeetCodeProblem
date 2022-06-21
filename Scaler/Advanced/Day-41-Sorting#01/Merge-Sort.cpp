@@ -13,9 +13,16 @@ Output
 */
 #include<bits/stdc++.h>
 using namespace std;
+int times=1;
 void merge_array(vector<int>&A,int low,int mid,int high){
-        vector<int>temp(high-low+1);
-        int p1=low,p2=mid+1, p3=0;
+    cout<<"times"<<" "<<times<<endl;
+    times++;
+    cout<<"================="<<endl;
+       cout<<"low"<<" "<<low<<endl;
+       cout<<"mid"<<" "<<mid<<endl;
+       cout<<"high"<<" "<<high<<endl;
+        vector<int>temp(high-low+1,0);
+        int p1=low,p2=mid+1,p3=0;
         while(p1<mid && p2<high){
             if(A[p1]<A[p2]){
                 temp[p3]=A[p1];
@@ -55,7 +62,7 @@ vector<int>solve(vector<int> &A) {
         return A;
 }
 int main(){
-    vector<int>A={1, 4, 10, 2, 1, 5};
+    vector<int>A={5,2,3,1};
     vector<int>result;
      result=solve(A);
      for(auto it:result){
