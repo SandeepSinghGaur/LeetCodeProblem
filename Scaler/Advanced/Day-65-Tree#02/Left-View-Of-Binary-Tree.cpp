@@ -88,7 +88,9 @@ vector<int> solve(TreeNode* A) {
     result=solve(n1);
     for(int i=0;i<result.size();i++){
             cout<<result[i]<<" ";
+            
     }
+    cout<<endl;
   
 
  }
