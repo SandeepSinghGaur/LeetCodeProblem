@@ -8,11 +8,11 @@ My solutions to questions on Scaler Academy topic wise
 | Topic | Question | Solution |
 | ----- | -------- | -------- |
 |Arrays|||
-|0|Littel Ponny and Max Element|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Intermediate/Day-08-Array/little_ponny_and_max_element.cpp)|
-|1|Merge Overlapping Intervals|[Here]()|
-|2|Wave Array|[Here]()|
-|3|Maximum Absolute Difference|[Here]()|
-|4|Merge Intervals|[Here]()|
+|0|Beggars Outside Temple |[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-31-Array%2301/beggars_outside_temple.cpp)|
+|1|Flip Coin|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-31-Array%2301/flip-coin.cpp)|
+|2|Max Negative SubArray|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-31-Array%2301/max_non_negative_subarray.cpp)|
+|3|Max Sum Contiguous SubArray|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-31-Array%2301/max_sum_contiguous_subArray.cpp)|
+|4|RAIN WATER TAPPED PROBLEM|[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-31-Array%2301/rain_water_tapped.cpp)|
 |5|Minimum Absolute Difference|[Here]()|
 |6|Multiple left rotations of the array|[Here]()|
 |7|Pascal Triangle|[Here]()|
