@@ -1,7 +1,7 @@
 | Topic | Question | Solution |
 | ----- | -------- | -------- |
 |Arrays|||
-|0|Max Non Negative SubArray|[Here]()|
+|0|Depth of each node |[Here](https://github.com/SandeepSinghGaur/Scaler-Leetcode/blob/EasyProblem/Scaler/Advanced/Day-64-Tree%2301/Depth-of-Each-Node.cpp)|
 |1|Merge Overlapping Intervals|[Here]()|
 |2|Wave Array|[Here]()|
 |3|Maximum Absolute Difference|[Here]()|
