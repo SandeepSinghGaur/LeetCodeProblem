@@ -1,4 +1,37 @@
+/*
+ * Problem Description
+   You are given an integer T (number of test cases). You are given array A and an integer B for each test case. You have to tell whether B is present in array A or not.
+ 
+   
 
+ Problem Constraints
+1 <= T <= 10
+
+1 <= |A| <= 105
+
+1 <= A[i], B <= 109
+
+
+Input 1:
+
+ 1 
+ 5 4 1 5 9 1
+ 5
+Input 2:
+
+ 1
+ 3 7 7 2
+ 1
+ * 
+ * 
+ * 
+Output 1:
+
+ 1 
+Output 2:
+
+ 0 
+ */
 
 import java.util.*;
 

@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ReversetheArray",
+      "request": "launch",
+      "mainClass": "ReversetheArray",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch SearchElement",
       "request": "launch",
       "mainClass": "SearchElement",
