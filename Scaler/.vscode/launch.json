@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SearchElement",
+      "request": "launch",
+      "mainClass": "SearchElement",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch TwoDArrayList",
       "request": "launch",
       "mainClass": "TwoDArrayList",
