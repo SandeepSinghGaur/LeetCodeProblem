@@ -48,22 +48,29 @@ bool cmp(pair<int,int>&a,pair<int,int>&b){
 }
 const int mod=1000000007; 
 int solve(vector<int> &A, vector<int> &B) {
-   int ans=0;
+    int ans=0;
     vector<pair<int,int>>zipped;
     for(int i=0;i<A.size();i++){
         zipped.push_back({A[i],B[i]});
     }
     sort(zipped.begin(),zipped.end(),cmp);
-    for(int i=0;i<zipped.size();i++){
-        cout<<zipped[i].first<<"   "<<zipped[i].second<<endl;
-    }
-    int count=0;
-    for(int i=0;i<zipped.size();i++){
-       if(zipped[i].first-1>=count){
-           ans=(ans%mod+(zipped[i].second)%mod)%mod;
-           count++;
+    int current_time=0;
+   priority_queue<int,vector<int>,greater<int>> pq;
+   for(int i=0;i<zipped.size();i++){
+       if(zipped[i].first-1>=current_time){
+           pq.push(zipped[i].second);
+           current_time++;
+       }else{
+           if(pq.top()<zipped[i].second){
+               pq.pop();
+               pq.push(zipped[i].second);
+           }
        }
-    }
+   }
+   while(!pq.empty()){
+       ans=(ans%mod+(pq.top())%mod)%mod;
+       pq.pop();
+   }
     return ans;
 }
 
