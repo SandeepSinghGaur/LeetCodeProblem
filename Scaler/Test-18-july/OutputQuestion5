@@ -1,0 +1,23 @@
+Which of the following code can be replaced at TODO statement?
+
+interface Foo {} 
+class Alpha implements Foo {} 
+class Beta extends Alpha {}
+class Delta extends Beta {
+
+	public static void main( String[] args ) {
+		Beta x = new Beta(); 
+		//TODO
+	} 
+} 
+
+A. Alpha a = x; 
+
+B. Foo f = (Delta)x; 
+
+C. Foo f = (Alpha)x; 
+
+D. Beta b = (Beta)(Alpha)x;
+
+Output:   Beta b = (Beta)(Alpha)x;
+reason: object type casting we are checking runtime

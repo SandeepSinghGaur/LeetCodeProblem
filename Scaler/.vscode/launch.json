@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch SampleOutput",
+      "request": "launch",
+      "mainClass": "SampleOutput",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
+      "name": "Launch FirstIndex",
+      "request": "launch",
+      "mainClass": "FirstIndex",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch ReversetheArray",
       "request": "launch",
       "mainClass": "ReversetheArray",

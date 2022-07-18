@@ -51,7 +51,7 @@ bool hotel(vector<int> &arrive, vector<int> &depart, int K) {
             index++;
         }
         cout<<"count"<<" "<<count<<endl;
-        if(count>K){
+        if(count+1>K){
             return false;
         }
     }

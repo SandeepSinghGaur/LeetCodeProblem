@@ -20,6 +20,7 @@ int solve(string A) {
       int totala=0;
     for(int i=0;i<A.length();i++){
         if(A[i]=='a'-0){
+            cout<<A[i]<<" "<<"=="<<'a'-0<<endl;
             totala++;
         }
     }

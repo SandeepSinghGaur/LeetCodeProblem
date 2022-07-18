@@ -32,6 +32,10 @@
     "ostream": "cpp",
     "vector": "cpp",
     "functional": "cpp"
-  }
+  },
+  "java.project.sourcePaths": [
+    "DSA_IN_JAVA/DSA Intermediate/Day-08-Array#01",
+    "Test-18-july"
+  ]
  
 }

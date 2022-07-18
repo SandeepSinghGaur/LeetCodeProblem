@@ -1,0 +1,29 @@
+public class Test1 {
+
+    public static void parse(String str) {
+        try {
+            float f = Float.parseFloat(str);
+        } catch (NumberFormatException nfe) {
+            f = 0;
+        } finally {
+            System.out.println(f);
+        }
+    }
+
+    public static void main(String[] args) {
+        parse("invalid");
+    }
+}
+
+
+
+A. 0.0
+
+B. Compilation fails.
+
+C. A ParseException is thrown by the parse method at runtime.
+
+D. A NumberFormatException is thrown by the parse method at runtime.
+
+
+Output: Compilation Error because f declared locally so f cannot be resolved to a variable
