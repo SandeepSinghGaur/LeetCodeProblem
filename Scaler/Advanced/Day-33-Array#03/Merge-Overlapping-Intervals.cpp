@@ -24,6 +24,12 @@ bool cmp(struct Interval a,struct Interval b){
 vector<Interval>merge(vector<Interval> &A) {
     vector<Interval>result;
     sort(A.begin(),A.end(),cmp);
+     cout<<A.size()<<endl;
+     cout<<"before Sorting Intervals"<<endl;
+    for(int i=0;i<A.size();i++){
+        cout<<A[i].start<<" "<<A[i].end<<endl;
+    }
+     cout<<"After Sorting Intervals"<<endl;
     struct Interval coordinate;
     coordinate.start=A[0].start;
     coordinate.end=A[0].end;
@@ -33,8 +39,8 @@ vector<Interval>merge(vector<Interval> &A) {
     }
     else{
           for(int i=1;i<A.size();i++){
-          while(coordinate.end>A[i].start && i<A.size()){
-          check=false;
+          while(i<A.size() && coordinate.end>A[i].start ){
+           check=false;
            coordinate.start=min(coordinate.start,A[i].start);
            coordinate.end=max(coordinate.end,A[i].end);
            i++;
