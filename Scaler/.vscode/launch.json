@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch RotationGame",
+      "request": "launch",
+      "mainClass": "RotationGame",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
+      "name": "Launch MaxSumArray",
+      "request": "launch",
+      "mainClass": "MaxSumArray",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch SampleOutput",
       "request": "launch",
       "mainClass": "SampleOutput",
