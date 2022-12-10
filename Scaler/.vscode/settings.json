@@ -35,6 +35,7 @@
   },
   "java.project.sourcePaths": [
     "LeetCodeInJAVA"
-  ]
+  ],
+  "java.debug.settings.onBuildFailureProceed": true
  
 }

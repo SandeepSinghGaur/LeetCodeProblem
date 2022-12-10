@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch LittlePonny",
+      "request": "launch",
+      "mainClass": "LittlePonny",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
+      "name": "Launch LittlePonnyAndMaximumElement",
+      "request": "launch",
+      "mainClass": "LittlePonnyAndMaximumElement",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch ReverseArray",
       "request": "launch",
       "mainClass": "ReverseArray",
