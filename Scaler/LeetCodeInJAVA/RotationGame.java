@@ -10,9 +10,10 @@ public class RotationGame {
         }
         int k = sc.nextInt();
         sc.close();
+        int p=k%n;
         k=n-k;
-        reverseArray(A, 0, k > n ? n % k - 1 : k - 1);
-        reverseArray(A, k > n ? n % k + 1 : k, n - 1);
+        reverseArray(A, 0, p-1);
+        reverseArray(A, p, n - 1);
         reverseArray(A, 0, n - 1);
         for (int a : A) {
             System.out.print(a + " ");

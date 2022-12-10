@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch MaxAndMinOfAnArray",
+      "request": "launch",
+      "mainClass": "MaxAndMinOfAnArray",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
+      "name": "Launch GoodPair",
+      "request": "launch",
+      "mainClass": "GoodPair",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch RotationGame",
       "request": "launch",
       "mainClass": "RotationGame",
