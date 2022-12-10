@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ReverseArray",
+      "request": "launch",
+      "mainClass": "ReverseArray",
+      "projectName": "Scaler_8063b526"
+    },
+    {
+      "type": "java",
       "name": "Launch MaxAndMinOfAnArray",
       "request": "launch",
       "mainClass": "MaxAndMinOfAnArray",
